@@ -5,9 +5,9 @@ namespace StrategyPattern
 {
     public abstract class Duck
     {
-        FlyBehavior flyBehavior;
-        QuackBehavior quackBehavior;
-        public Duck() {};
+        IFlyBehavior flyBehavior;
+        IQuackBehavior quackBehavior;
+        public Duck() {}
 
         public abstract void display();
 
@@ -23,7 +23,7 @@ namespace StrategyPattern
 
         public virtual void swim()
         {
-            WriteLine("All ducks float, even decoys!")
+            WriteLine("All ducks float, even decoys!");
         }
 
     }

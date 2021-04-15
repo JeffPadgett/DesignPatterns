@@ -3,11 +3,13 @@ using static System.Console;
 
 namespace StrategyPattern
 {
-    public class FlyWithWings : IFlyBehavior
+    public class CantFly : IFlyBehavior
     {
         public void fly()
         {
-            WriteLine("I'm flying!!");
+            WriteLine("I can't fly!");
         }
     }
+
+
 }

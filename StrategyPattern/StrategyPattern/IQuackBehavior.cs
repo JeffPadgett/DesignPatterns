@@ -2,8 +2,8 @@ using System;
 
 namespace StrategyPattern
 {
-    public interface QuackBehavior
+    public interface IQuackBehavior
     {
-        public void fly();
+        public void quack();
     }
 }

@@ -2,7 +2,7 @@ using System;
 
 namespace StrategyPattern
 {
-    public interface FlyBehavior
+    public interface IFlyBehavior
     {
         public void fly();
     }

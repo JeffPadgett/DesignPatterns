@@ -5,11 +5,14 @@ namespace StrategyPattern
 {
     public abstract class Duck
     {
-        IFlyBehavior flyBehavior;
-        IQuackBehavior quackBehavior;
         public Duck() {}
+        public IFlyBehavior flyBehavior { get; set; }
+        public IQuackBehavior quackBehavior { get; set; }
 
-        public abstract void display();
+        public virtual void display()
+        {
+            WriteLine("I am just a plan default duck");
+        }
 
         public void performFly()
         {
@@ -21,7 +24,7 @@ namespace StrategyPattern
             quackBehavior.quack();
         }
 
-        public virtual void swim()
+        protected virtual void swim()
         {
             WriteLine("All ducks float, even decoys!");
         }

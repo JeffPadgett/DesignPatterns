@@ -7,6 +7,7 @@ namespace DecoratorClassLib
         public Soy(Beverage bev)
         {
             this.beverage = bev;
+            this.BeverageSize = bev.BeverageSize;
         }
 
         public override string GetDescription()
@@ -16,8 +17,8 @@ namespace DecoratorClassLib
 
         public override double Cost()
         {
-            
-            return beverage.Cost() +  .89;
+            double sizeAdjustmentCost = beverage.BeverageSize == Size.Tall ? .10 : beverage.BeverageSize == Size.Grande ? .15 : .20;
+            return beverage.Cost() +  .50 + sizeAdjustmentCost;
         }
     } 
 }

@@ -11,7 +11,7 @@ namespace DecoratorClassLib
 
         public override double Cost()
         {
-            return .89;
+            return 1.05;
         }
     } 
 }

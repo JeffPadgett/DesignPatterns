@@ -6,7 +6,7 @@ namespace DecoratorClassLib
     {
         public Espresso()
         {
-            description = "Espresso";
+            description = "Espresso Beverage";
         }
 
         public override double Cost()

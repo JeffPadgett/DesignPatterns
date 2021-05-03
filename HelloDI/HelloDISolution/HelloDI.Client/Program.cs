@@ -12,6 +12,7 @@ namespace HelloDI.Client
         static void Main()
         {
             //IMessageWriter writer = new ConsoleMessageWriter();
+            string directory = Directory.GetCurrentDirectory();
             IConfigurationRoot configuration = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
                 .AddJsonFile("appsettings.json")

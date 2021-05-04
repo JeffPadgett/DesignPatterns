@@ -10,8 +10,8 @@ namespace HelloDI.UnitTest
         public void WriteMessageWillWriteCorrectMessageToMessageWriter()
         {
             var writer = new SpyMessageWriter();
-            var sut = new Salution(writer);
-            sut.WriteMessage();
+            var softwareUnderTesting = new Salution(writer);
+            softwareUnderTesting.WriteMessage();
             Assert.Equal(expected: "Hello DI!", actual: writer.WrittenMessage);
         }
 

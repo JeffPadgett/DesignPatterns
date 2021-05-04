@@ -10,7 +10,6 @@ namespace HelloDI.Client
         {
 
             #region Late Binding
-            //IMessageWriter writer = new ConsoleMessageWriter();
             //string directory = Directory.GetCurrentDirectory();
             //IConfigurationRoot configuration = new ConfigurationBuilder()
             //    .SetBasePath(Directory.GetCurrentDirectory())
@@ -24,9 +23,10 @@ namespace HelloDI.Client
             #endregion
 
             #region Extensibility using the decorator pattern that is enabled by using DI
-            IMessageWriter writer = new SecureMessageWriter(new ConsoleMessageWriter(), WindowsIdentity.GetCurrent());
+            //IMessageWriter writer = new SecureMessageWriter(new ConsoleMessageWriter(), WindowsIdentity.GetCurrent());
             #endregion
 
+            IMessageWriter writer = new ConsoleMessageWriter();
             var salution = new Salution(writer);
             salution.WriteMessage();
             //WriteLine("Hello World!");

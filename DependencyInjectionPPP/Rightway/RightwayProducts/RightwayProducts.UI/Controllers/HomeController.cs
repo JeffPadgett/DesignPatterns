@@ -18,15 +18,17 @@ namespace RightwayProducts.UI.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public ViewResult Index()
         {
-            return View();
+            var vm = new FeaturedProductsViewModel( new[]
+            {
+                new ProductViewModel("Chocolate", 34.95m),
+                new ProductViewModel("Asparagus", 39.80m)
+            });
+
+            return this.View(vm);
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

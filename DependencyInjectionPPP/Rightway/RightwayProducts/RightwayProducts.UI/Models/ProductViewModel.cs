@@ -3,17 +3,18 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
+using RightWay.ClassLib;
 
 namespace RightwayProducts.UI.Models
 {
     public class ProductViewModel
     {
-        private static CultureInfo PriceCulture = new CultureInfo("en-US");
+        //private static CultureInfo PriceCulture = new CultureInfo("en-US");
         public string SummaryText { get; }
 
-        public ProductViewModel(string name, decimal unitPrice)
+        public ProductViewModel(DiscountedProduct discountedProduct)
         {
-            this.SummaryText = $"{name} ({unitPrice:C}))";
+            this.SummaryText = $"{discountedProduct.Name} ({discountedProduct.UnitPrice:C}))";
         }
     }
 }

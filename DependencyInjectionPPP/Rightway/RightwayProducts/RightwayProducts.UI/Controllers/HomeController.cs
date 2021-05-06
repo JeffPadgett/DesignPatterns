@@ -6,29 +6,29 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using RightWay.ClassLib;
 
 namespace RightwayProducts.UI.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly IProductService _productService;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(IProductService productService)
         {
-            _logger = logger;
+            this._productService = productService ?? throw new ArgumentNullException("productService");
         }
 
         public ViewResult Index()
         {
-            var vm = new FeaturedProductsViewModel( new[]
-            {
-                new ProductViewModel("Chocolate", 34.95m),
-                new ProductViewModel("Asparagus", 39.80m)
-            });
+            IEnumerable<DiscountedProduct> products = _productService.GetFeaturedProducts();
 
-            return this.View(vm);
+            var vm = new FeaturedProductsViewModel(
+                from product in products
+                select new ProductViewModel(product));
+
+            return View(vm);
         }
-
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

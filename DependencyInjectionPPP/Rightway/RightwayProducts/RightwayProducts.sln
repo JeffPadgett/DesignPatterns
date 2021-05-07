@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RightwayProducts.UI", "Righ
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rightway.ClassLib", "RightWay.ClassLib\Rightway.ClassLib.csproj", "{CF35344C-1746-481C-874E-86CC45C25E85}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rightway.Data", "Rightway.Data\Rightway.Data.csproj", "{D5B20594-7648-405F-B1BB-E63C4AD2C909}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{CF35344C-1746-481C-874E-86CC45C25E85}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF35344C-1746-481C-874E-86CC45C25E85}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF35344C-1746-481C-874E-86CC45C25E85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5B20594-7648-405F-B1BB-E63C4AD2C909}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5B20594-7648-405F-B1BB-E63C4AD2C909}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5B20594-7648-405F-B1BB-E63C4AD2C909}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5B20594-7648-405F-B1BB-E63C4AD2C909}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
